@@ -1,6 +1,13 @@
--- Set the Scripting Zone GUID to trigger the trap.
-szg = "14bf2a"
-hidden = true
+--[[ 
+This script is used to hide "traps" in TTS RPG games. Like floor spikes, fireballs, boulders, hidden monsters, etc. The objects are reavealed when any other object ENTERS the Scripting Zone.
+
+1.) Add a Scripting Zone that will unhide the trap object. Normally, your trap object will be within this zone as well.
+2.) Copy the scripting Zones GUID
+3.) Copy and paste this script into the objects scipting editor.
+4.) Replace the Scripting Zone GUID value in the script below.
+
+--]]
+szg = "SCRIPTING_ZONE_GUID"  -- Set this value to the GUID of the Scripting Zone you want to trigger the trap.
 
 
 function onload()
@@ -25,9 +32,10 @@ function update()
     end
 end
 
+
 function onObjectEnterScriptingZone(zone, obj)
     if zone.guid == szg then
-        -- print(obj.getName() .. " entered zone " .. zone.getGUID())
+        -- print(obj.getGUID() .. " " .. obj.getName() .. " entered zone " .. zone.getGUID())
         showtrap()
     end
 end

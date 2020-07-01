@@ -1,5 +1,6 @@
 --[[ 
-This script is used to hide "traps" in TTS RPG games. Like floor spikes, fireballs, boulders, hidden monsters, etc. The objects are reavealed when any other object ENTERS the Scripting Zone.
+This script is used to hide "traps" in TTS RPG games. Like floor spikes, fireballs, boulders, hidden monsters, etc. 
+The objects are reavealed when any other object ENTERS the Scripting Zone.
 
 1.) Add a Scripting Zone that will unhide the trap object. Normally, your trap object will be within this zone as well.
 2.) Copy the scripting Zones GUID
